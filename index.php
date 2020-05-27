@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <article class="col-md-6">
