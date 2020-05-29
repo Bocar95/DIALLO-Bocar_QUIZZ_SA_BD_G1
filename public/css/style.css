@@ -74,6 +74,10 @@ body {
     justify-content: center;
 }
 
+.error-form {
+    color: red;
+}
+
 .btn-connexion {
     margin-top: 10%;
     display: flex;

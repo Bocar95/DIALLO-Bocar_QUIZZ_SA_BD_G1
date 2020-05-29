@@ -17,15 +17,17 @@
             </article>
 
             <article class="col-md-6">
-                <form action="" method="post" class="form">
+                <form action="connexion.php" method="post" class="form" id="form-connexion">
                     <div class="form-control">
                         <label for="login">Login</label>
-                        <input type="text" name="login" id="login" placeholder="Saisir votre Login">
+                        <input type="text" name="login" id="login" error="error-1" placeholder="Saisir votre Login">
+                        <div class="error-form" id="error-1"></div>
                     </div>
 
                     <div class="form-control">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Saisir votre mot de passe">
+                        <input type="password" name="password" id="password" error="error-2" placeholder="Saisir votre mot de passe">
+                        <div class="error-form" id="error-2"></div>
                     </div>
 
                     <div class="btn-connexion">
@@ -34,7 +36,7 @@
 
                     <div class="btn-inscription">
                         <p>If you don't have an account...</p>
-                        <button type="submit" name="sign-up" class="btn btn-primary">Sign up</button>
+                        <a href="pages/inscription.php"><button type="submit" name="sign-up" class="btn btn-primary">Sign up</button></a>
                     </div>
                 </form>
             </article>
@@ -43,3 +45,36 @@
     </div>
 </body>
 </html>
+
+
+<script>
+    const inputs= document.getElementsByTagName("input");
+    for (input of inputs){
+        input.addEventListener("keyup",function(e){
+           if (e.target.hasAttribute("error")){
+               var idDivError=e.target.getAttribute("error");
+               document.getElementById(idDivError).innerText=""
+           }
+        })
+    }
+    document.getElementById("form-connexion").addEventListener("submit",function(e){
+        const inputs= document.getElementsByTagName("input");
+        var error=false;
+        for (input of inputs){
+            if (input.hasAttribute("error")){
+                var idDivError=input.getAttribute("error");
+            if (!input.value){
+                document.getElementById(idDivError).innerText="Ce champ est obligatoire."
+                error=true
+            }
+            
+            }
+        }
+
+        if(error){
+            e.preventDefault();
+            return false;
+        }
+           
+    })
+</script>
