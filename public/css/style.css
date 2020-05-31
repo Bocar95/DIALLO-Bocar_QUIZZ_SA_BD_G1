@@ -95,7 +95,7 @@ body {
     font-weight: bold;
 }
 
-.btn-inscription button{
+.btn-inscription a{
     position: relative;
     display: block;
     width: 35%;

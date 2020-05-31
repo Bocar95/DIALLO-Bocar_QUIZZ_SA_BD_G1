@@ -1,3 +1,13 @@
+<?php
+require_once('data/fonctions.php');
+if (isset($_GET['lien'])){
+    if (isset($_GET['statut']) && $_GET['statut']==="logout"){
+        deconnexion();
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +27,10 @@
             </article>
 
             <article class="col-md-6">
-                <form action="connexion.php" method="post" class="form" id="form-connexion">
+                <form action="traitements/connexion1.php" method="post" class="form" id="form-connexion">
                     <div class="form-control">
                         <label for="login">Login</label>
-                        <input type="text" name="login" id="login" error="error-1" placeholder="Saisir votre Login">
+                        <input type="text" name="login" id="login" error="error-1" placeholder="Saisir votre identifiant">
                         <div class="error-form" id="error-1"></div>
                     </div>
 
@@ -36,7 +46,7 @@
 
                     <div class="btn-inscription">
                         <p>If you don't have an account...</p>
-                        <a href="pages/inscription.php"><button type="submit" name="sign-up" class="btn btn-primary">Sign up</button></a>
+                        <a href="pages/inscription.php" class="btn btn-primary">Sign up</a>
                     </div>
                 </form>
             </article>
