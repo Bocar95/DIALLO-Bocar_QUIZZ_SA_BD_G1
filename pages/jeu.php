@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['login'])){
+    header("Location:../index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +13,6 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="../index.php?statut=logout">Deconnexion</a>
+    <a href="../logout.php" class="btn btn-primary">Deconnexion</a>
 </body>
 </html>

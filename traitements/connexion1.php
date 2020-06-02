@@ -26,18 +26,22 @@ try {
                 )
             );
 
+            $result = $statement->fetch(PDO::FETCH_ASSOC);
+            if ($result['profil']=="admin"){
+                header("Location:../pages/admin.php");
+            }else{
+                if ($result['profil']=="joueur"){
+                    header("Location:../pages/jeu.php");
+                }
+            }
+
             $count = $statement->rowCount();
             if ($count > 0) {
                 $_SESSION['login'] = $_POST['login'];
-                $_SESSION['password'] = $_POST['password'];
-
-                if ($_SESSION['login']==="admin" && $_SESSION['password']==="admin"){
-                    header("location:../pages/admin.php");
-                }else {
-                    if ($_SESSION['login']==="joueur" && $_SESSION['password']==="joueur"){
-                        header("location:../pages/jeu.php");
-                    }
-                }   
+                $_SESSION['prenom'] = $result['prenom'];
+                $_SESSION['nom'] = $result['nom'];
+                $_SESSION['score'] = $result['score'];
+                $_SESSION['image'] = $result['image'];  
             }else{
                 header("location:../index.php");
             }
