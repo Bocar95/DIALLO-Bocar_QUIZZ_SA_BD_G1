@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Page Inscription</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/bootstrap.css">
-    <link rel="stylesheet" href="../public/css/style-inscription.css">
-</head>
-<body>
-    <div class="container-fluid">
+
+    <style>@import url("./public/css/style-inscription.css");</style>
 
         <div class="row">
             <div class="image">
-                <img src="../public/images/logos et icones/logo1.png" alt="">
+                <img src="./public/images/logos et icones/logo1.png" alt="">
             </div>
             <div class="barre">
                 <p>INSCRIVEZ-VOUS POUR JOUER</p>
@@ -22,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <article class="col-md-6">
-                    <form action="../traitements/inscriptions-joueur.php" method="POST" class="form" id="form-inscription">
+                    <form action="../traitements/inscriptions-joueur.php" method="POST" class="form" id="connexion-form">
 
                         <div class="form-control">
                             <label for="prenom">Prenom</label>
@@ -59,11 +50,11 @@
 
                     <div class="upload">
                         <label for="photo">Photo</label>
-                        <img src="../public/images/logos et icones/7.jpg" id="im" class="image-ronde-avatar">
+                        <img src="./public/images/logos et icones/7.jpg" id="im" class="image-ronde-avatar">
                         <input type="file" name="monfichier" id="photo" class="btn btn-primary" onchange="previewImage(event)"/>
 
                         <div class="btn-validation">
-                            <button type="submit" name="velider" class="btn btn-success">Valider</button>
+                            <button type="submit" name="velider" class="btn btn-success" onclick="getFormData();">Valider</button>
                         </div>
                     </div>
 
@@ -74,56 +65,4 @@
                     </form>
             </div>
         </div>
-
-    </div>
-</body>
-</html>
-
-
-<script>
-//validation des champs //validation des champs  //validation des champs  //validation des champs  //validation des champs 
-    const inputs= document.getElementsByTagName("input");
-    for (input of inputs){
-        input.addEventListener("keyup",function(e){
-           if (e.target.hasAttribute("error")){
-               var idDivError=e.target.getAttribute("error");
-               document.getElementById(idDivError).innerText=""
-           }
-        })
-    }
-    document.getElementById("form-inscription").addEventListener("submit",function(e){
-        const inputs= document.getElementsByTagName("input");
-        var error=false;
-        for (input of inputs){
-            if (input.hasAttribute("error")){
-                var idDivError=input.getAttribute("error");
-            if (!input.value){
-                document.getElementById(idDivError).innerText="Ce champ est obligatoire."
-                error=true
-            }
-            
-            }
-        }
-
-        if(error){
-            e.preventDefault();
-            return false;
-        }
-           
-    })
-
-//upload de l'image //upload de l'image //upload de l'image //upload de l'image //upload de l'image
-    function previewImage(event)
-    {
-        var reader=new FileReader();
-        var imageField=document.getElementById("im")
-        reader.onload=function()
-        {
-            if(reader.readyState==2)
-            {
-                imageField.src=reader.result;
-            }
-        }
-        reader.readAsDataURL(event.target.files[0]);
-    }
-</script>
+    

@@ -1,58 +1,36 @@
 <?php
 session_start();
-// ICI LA CONNEXION EST FAITE EN INITIANT DEUX USER DANS UNE BASE DE DONNEES POUR FAIRE LES REDIRECTIONS.
+ require_once('./data/fonctions.php');
 
-$host= "localhost";
-$username ="root";
-$password = "";
-$database = "initialisation_user_quizz";
+    $login=$_POST['login'];
+    $password=$_POST['password'];
 
-try {
-    $connect = new PDO("mysql:host=$host; dbname=$database", $username, $password);
+    $result=getUserConnexion($login, $password);
+     
+    $result_array = $result->fetch(PDO::FETCH_ASSOC);
 
-    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    if (isset($_POST['login'])){
-        if (empty($_POST['password'])){
-            //
+    $count = $result->rowCount();
+    if ($count > 0) {
+        $_SESSION['login'] = $result_array['login'];
+        $_SESSION['prenom'] = $result_array['prenom'];
+        $_SESSION['nom'] = $result_array['nom'];
+        $_SESSION['score'] = $result_array['score'];
+        $_SESSION['image'] = $result_array['image'];  
+    }else{
+        header("location:./index.php");
+    }
+    
+    if($result_array !== false){
+        if($result_array['profil']=="admin"){
+            //header("Location:../pages/admin.php");
         }
-        else {
-            $query = 'SELECT * FROM user WHERE login = :login AND password = :password';
-            $statement = $connect->prepare($query);
-            $statement->execute(
-
-                array(
-                    'login' => $_POST['login'],
-                    'password' => $_POST['password']
-                )
-            );
-
-            $result = $statement->fetch(PDO::FETCH_ASSOC);
-            if ($result['profil']=="admin"){
-                header("Location:../pages/admin.php");
-            }else{
-                if ($result['profil']=="joueur"){
-                    header("Location:../pages/jeu.php");
-                }
+        else{
+            if ($result_array['profil']=="joueur"){
+            //header("Location:../pages/jeu.php");
             }
-
-            $count = $statement->rowCount();
-            if ($count > 0) {
-                $_SESSION['login'] = $_POST['login'];
-                $_SESSION['prenom'] = $result['prenom'];
-                $_SESSION['nom'] = $result['nom'];
-                $_SESSION['score'] = $result['score'];
-                $_SESSION['image'] = $result['image'];  
-            }else{
-                header("location:../index.php");
-            }
-
         }
     }
-
-}
-    catch(PDOException $error){
-        $message = $error->getMessage();
+    else{
+        echo "error";
     }
 
-
-?>
