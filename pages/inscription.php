@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <article class="col-md-6">
-                    <form action="../traitements/inscriptions-joueur.php" method="POST" class="form" id="connexion-form">
+                    <form action="./traitements/inscriptions-joueur.php" method="POST" class="form" id="connexion-form">
 
                         <div class="form-control">
                             <label for="prenom">Prenom</label>
@@ -54,7 +54,7 @@
                         <input type="file" name="monfichier" id="photo" class="btn btn-primary" onchange="previewImage(event)"/>
 
                         <div class="btn-validation">
-                            <button type="submit" name="velider" class="btn btn-success" onclick="getFormData();">Valider</button>
+                            <button type="submit" name="valider" class="btn btn-success" onclick="getFormData();">Valider</button>
                         </div>
                     </div>
 

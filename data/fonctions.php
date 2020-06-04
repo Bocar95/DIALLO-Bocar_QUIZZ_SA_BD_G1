@@ -7,12 +7,11 @@ session_start();
     exit;
 }
 
-function getConnexion()
+function getConnexion($database = "initialisation_user_quizz")
  {
     $host= "localhost";
     $username ="root";
     $password = "";
-    $database = "initialisation_user_quizz";
     $objetPDO="";
 
     try {
@@ -47,5 +46,16 @@ function getUserConnexion($login, $password){
     );
     
 return $req;
+}
+
+
+function sendData(){
+    //session_start();
+    
+        $objetPdo = getConnexion($database = "inscription_joueur_quizz");
+    
+        $pdoStat = $objetPdo->prepare("INSERT INTO inscriptions_joueur (id_joueur,prenom, nom, login, password, profil) VALUES (?,?,?,?,?,?)");
+        $pdoStat -> execute(array(null, $_POST['prenom'], $_POST['nom'], $_POST['login'], $_POST['password'], 'joueur'));
+        var_dump($objetPdo);
 }
 ?>
