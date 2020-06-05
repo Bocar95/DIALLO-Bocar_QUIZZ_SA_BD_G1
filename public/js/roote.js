@@ -25,7 +25,7 @@ function sendData(action,conten,is_post)
             let data=ajx.responseText;
             if(data=="error")
             {
-                  alert(" une erreur s est produit");
+                  alert("une erreur s est produit");
             }
             else
             {

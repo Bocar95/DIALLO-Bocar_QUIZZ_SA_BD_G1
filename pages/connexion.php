@@ -1,5 +1,5 @@
 <?php
-require_once('./data/fonctions.php');
+/*require_once('./data/fonctions.php');
     if (isset($_POST['connexion'])){
         $login=$_POST['login'];
         $pwd=$_POST['password'];
@@ -14,7 +14,7 @@ require_once('./data/fonctions.php');
         }else{
             header ("location:index.php?lien=".$result."&page=".$page);
         }
-    }
+    }*/
 
 ?>
 
@@ -28,7 +28,7 @@ require_once('./data/fonctions.php');
             </article>
 
             <article class="col-md-6">
-                <form action="" method="post" class="form" id="connexion-form">
+                <form action="./traitements/connexion1.php" method="post" class="form" id="connexion-form">
                     <div class="form-control">
                         <label for="login">Login</label>
                         <input type="text" name="login" id="login" error="error-1" placeholder="Saisir votre identifiant">
@@ -47,9 +47,10 @@ require_once('./data/fonctions.php');
 
                     <div class="btn-inscription">
                         <p>If you don't have an account...</p>
-                        <a href="index.php?lien=inscription" class="btn btn-primary">Sign up</a>
+                        <a href="index.php?action=inscription" class="btn btn-primary">Sign up</a>
                     </div>
                 </form>
             </article>
 
         </div>
+    <script src="./public/js/roote.js"></script>
