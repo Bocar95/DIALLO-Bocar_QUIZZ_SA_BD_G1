@@ -3,17 +3,18 @@
 
         <div class="row">
             <div class="image">
-                <img src="./public/images/logos et icones/logo1.png" alt="">
+                <img src="public/images/logos et icones/logo1.png" alt="">
             </div>
             <div class="barre">
                 <p>INSCRIVEZ-VOUS POUR JOUER</p>
+                <a href="#" class="btn btn-primary" id="link_inscription">Se connecter</a>
             </div>
         </div>
 
         <div class="container">
             <div class="row">
                 <article class="col-md-6">
-                    <form action="./traitements/inscriptions-joueur.php" method="POST" class="form" id="connexion-form">
+                    <form action="./traitements/inscriptions-joueur.php" method="POST" class="form" id="inscription-form">
 
                         <div class="form-control">
                             <label for="prenom">Prenom</label>
@@ -46,23 +47,24 @@
                         </div>
                 </article>
 
-                <article class="col-md-6">
+                        <article class="col-md-6">
 
-                    <div class="upload">
-                        <label for="photo">Photo</label>
-                        <img src="./public/images/logos et icones/7.jpg" id="im" class="image-ronde-avatar">
-                        <input type="file" name="monfichier" id="photo" class="btn btn-primary" onchange="previewImage(event)"/>
+                            <div class="upload">
+                                <label for="photo">Photo</label>
+                                <img src="./public/images/logos et icones/7.jpg" id="im" class="image-ronde-avatar">
+                                <input type="file" name="monfichier" id="photo" class="btn btn-primary" onchange="previewImage(event)"/>
 
-                        <div class="btn-validation">
-                            <button type="submit" name="valider" class="btn btn-success" onclick="getFormData();">Valider</button>
-                        </div>
-                    </div>
+                                <div class="btn-validation">
+                                    <button type="submit" name="valider" class="btn btn-success">Valider</button>
+                                </div>
+                            </div>
 
-                    
-
-                </article>
+                        </article>
 
                     </form>
             </div>
         </div>
-    
+
+        <script src="./public/js/jquery.js"></script>
+    <script src="./public/js/retour_connexion.js"></script>
+    <script src="./public/js/validation2.js"></script>

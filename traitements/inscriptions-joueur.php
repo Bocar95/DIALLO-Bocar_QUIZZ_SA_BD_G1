@@ -1,6 +1,6 @@
 <?php
 
-require_once('../data/fonctions.php');
+require_once('./data/fonctions.php');
 sendData();
 
 ?>

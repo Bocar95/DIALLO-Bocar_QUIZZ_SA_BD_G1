@@ -1,25 +1,4 @@
-<?php
-/*require_once('./data/fonctions.php');
-    if (isset($_POST['connexion'])){
-        $login=$_POST['login'];
-        $pwd=$_POST['password'];
-        require_once('./traitements/connexion1.php');
-
-        $result= $result_array['profil'];
-        $page=1;
-        $msg_erreur="";
-
-        if ($result==""){
-            header("Location:./index.php");
-        }else{
-            header ("location:index.php?lien=".$result."&page=".$page);
-        }
-    }*/
-
-?>
-
-
-<style>@import url("public/css/style.css");</style>
+<style>@import url("./public/css/style.css");</style>
         <div class="row">
 
             <article class="col-md-6">
@@ -28,7 +7,7 @@
             </article>
 
             <article class="col-md-6">
-                <form action="./traitements/connexion1.php" method="post" class="form" id="connexion-form">
+                <form action="traitements/connexion1.php" method="POST" class="form" id="connexion-form">
                     <div class="form-control">
                         <label for="login">Login</label>
                         <input type="text" name="login" id="login" error="error-1" placeholder="Saisir votre identifiant">
@@ -42,15 +21,18 @@
                     </div>
 
                     <div class="btn-connexion">
-                        <button type="submit" name="connexion" class="btn btn-success" onclick="getFormData();">Connexion</button>
+                        <button type="submit" name="connexion" id="connexion" class="btn btn-success">Connexion</button>
                     </div>
 
                     <div class="btn-inscription">
                         <p>If you don't have an account...</p>
-                        <a href="index.php?action=inscription" class="btn btn-primary">Sign up</a>
+                        <a href="#" class="btn btn-primary" id="link_inscription">Sign up</a>
                     </div>
                 </form>
             </article>
 
         </div>
-    <script src="./public/js/roote.js"></script>
+
+        <script src="./public/js/jquery.js"></script>
+        <script src="./public/js/inscription.js"></script>
+        <script src="public/js/validation.js"></script>

@@ -17,22 +17,18 @@ session_start();
         $_SESSION['nom'] = $result_array['nom'];
         $_SESSION['score'] = $result_array['score'];
         $_SESSION['image'] = $result_array['image'];  
-    }else{
-        header("location:../index.php");
-    }
-    
-    if($result_array !== false){
-        if($result_array['profil']=="admin"){
-            header("Location:../pages/admin.php");
-        }
-        else{
-            if ($result_array['profil']=="joueur"){
-                header("Location:../pages/jeu.php");
+
+        if($result_array !== false){
+            if($result_array['profil']=="admin"){
+                echo "success_admin";
+            }   
+            else{
+                if ($result_array['profil']=="joueur"){
+                    echo "success_joueur";
+                }
             }
         }
-    }
-    else{
-        echo "error";
+    }else{
+        header('Location:../index.php');
     }
 ?>
-

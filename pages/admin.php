@@ -1,18 +1,29 @@
 <?php
 session_start();
 if (!isset($_SESSION['login'])){
-    header("Location:../index.php");
+    header("Location:./index.php");
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/style-acceuil-admin.css">
+</head>
+<body>
 
-    <style>@import url("../public/css/style-acceuil-admin.css");</style>
+<div class="container-fluid" id="container-fluid">
+
         <div class="row">
 
             <article class="col-md">
                 <div class="menu-liste-questions">
                     <span class="cadre-couleur-1">
                     </span>
-                    <a href="admin.php?lien=liste-questions" class="cadre-lien-image">
+                    <a href="#" class="cadre-lien-image" id="link_liste_Questions">
                         <p>Liste Questions</p>
                         <img src="../public/images/logos et icones/ic-liste-active.png" alt="">
                     </a>
@@ -23,7 +34,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-creer-admin">
                     <span class="cadre-couleur-2">
                     </span>
-                    <a href="admin.php?lien=creer-admin" class="cadre-lien-image">
+                    <a href="#" class="cadre-lien-image" id="link_creer_admin">
                         <p>Creer Admin</p>
                         <img src="../public/images/logos et icones/ic-ajout-active.png" alt="">
                     </a>
@@ -41,7 +52,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-liste-joueurs">
                     <span class="cadre-couleur-3">
                     </span>
-                    <a href="admin.php?lien=liste-joueurs" class="cadre-lien-image">
+                    <a href="#" class="cadre-lien-image" id="link_liste_joueurs">
                         <p>Liste Joueurs</p>
                         <img src="../public/images/logos et icones/ic-liste.png" alt="">
                     </a>
@@ -52,7 +63,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-creer-questions">
                     <span class="cadre-couleur-4">
                     </span>
-                    <a href="admin.php?lien=creer-questions" class="cadre-lien-image">
+                    <a href="#" class="cadre-lien-image" id="link_creer_Questions">
                         <p>Creer Questions</p>
                         <img src="../public/images/logos et icones/ic-ajout.png" alt="">
                     </a>
@@ -90,26 +101,22 @@ if (!isset($_SESSION['login'])){
                 </div>
             </div>
 
-            <div class="row">
-                <?php
-                if (isset($_GET['lien'])){
-                    switch($_GET['lien']){
-                            case "liste-questions":
-                                require_once("liste-questions.php");
-                            break;
-                            case "creer-admin":
-                                require_once("creer-admin.php");
-                            break;
-                            case "liste-joueurs":
-                                require_once("liste-joueurs.php");
-                            break;
-                            case "creer-questions":
-                                require_once("creer-questions.php");
-                            break;
-                            default;
-                        }
-                }
-                ?>
+            <div class="row" id="row">
+                <!--ON AFFICHERA LES DIFFERENTES PAGES ICI-->
             </div>
 
         </div>
+    </div>
+
+    <script src="../public/js/jquery.js"></script>
+    <script src="../public/js/link_menu_admin.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

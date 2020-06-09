@@ -1,1 +1,0 @@
-# DIALLO-Bocar_QUIZZ_SA_BD_G1

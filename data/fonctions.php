@@ -37,7 +37,7 @@ function getUserConnexion($login, $password){
     
     $req=$opdo->prepare($sql);
 
-   // ecriture des parametre
+   // ecriture des parametres
     $req->execute(
        array(
            'login' => $login,

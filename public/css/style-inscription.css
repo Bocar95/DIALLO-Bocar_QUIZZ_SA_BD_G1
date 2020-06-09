@@ -28,12 +28,22 @@
 }
 
 .barre p {
+    position: relative;
     margin: 0px auto;
     font-size: 40px;
     color: white;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
+    display: inline;
+    align-items: center;
+}
+
+.barre a {
+    position: relative;
+    display: inline;
+    left: 5%;
+    bottom: 10%;
 }
 
 .container {
