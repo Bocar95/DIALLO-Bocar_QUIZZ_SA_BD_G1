@@ -15,8 +15,8 @@ session_start();
         $_SESSION['login'] = $result_array['login'];
         $_SESSION['prenom'] = $result_array['prenom'];
         $_SESSION['nom'] = $result_array['nom'];
-        $_SESSION['score'] = $result_array['score'];
-        $_SESSION['image'] = $result_array['image'];  
+        /*$_SESSION['score'] = $result_array['score'];
+        $_SESSION['image'] = $result_array['image'];*/  
 
         if($result_array !== false){
             if($result_array['profil']=="admin"){
