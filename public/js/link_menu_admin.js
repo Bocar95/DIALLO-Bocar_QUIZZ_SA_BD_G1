@@ -30,7 +30,7 @@ $('#link_liste_joueurs').on("click",function(){
     const menu_liste_joueurs = $('#row');
 
     //fileContentLoader(menu_liste_joueurs,'liste-joueurs.php');
-    menu_liste_joueurs.html("")
+    menu_liste_joueurs.html("");
     menu_liste_joueurs.load(`liste-joueurs.php`);
     
 });
