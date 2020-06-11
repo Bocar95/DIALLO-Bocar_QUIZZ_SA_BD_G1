@@ -35,7 +35,7 @@ $('#connexion-form').submit(function(){
 $('#link_inscription').click(function(e){
     
     const form_inscription = $('#container-fluid');
-
+    form_inscription.html('');
     fileContentLoader(form_inscription,'inscription.php');
     
 });

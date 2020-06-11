@@ -23,7 +23,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-liste-questions">
                     <span class="cadre-couleur-1">
                     </span>
-                    <a href="#" class="cadre-lien-image" id="link_liste_Questions">
+                    <a href="#1" class="cadre-lien-image" id="link_liste_Questions">
                         <p>Liste Questions</p>
                         <img src="../public/images/logos et icones/ic-liste-active.png" alt="">
                     </a>
@@ -34,7 +34,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-creer-admin">
                     <span class="cadre-couleur-2">
                     </span>
-                    <a href="#" class="cadre-lien-image" id="link_creer_admin">
+                    <a href="#2" class="cadre-lien-image" id="link_creer_admin">
                         <p>Creer Admin</p>
                         <img src="../public/images/logos et icones/ic-ajout-active.png" alt="">
                     </a>
@@ -52,7 +52,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-liste-joueurs">
                     <span class="cadre-couleur-3">
                     </span>
-                    <a href="#" class="cadre-lien-image" id="link_liste_joueurs">
+                    <a href="#3" class="cadre-lien-image" id="link_liste_joueurs">
                         <p>Liste Joueurs</p>
                         <img src="../public/images/logos et icones/ic-liste.png" alt="">
                     </a>
@@ -63,7 +63,7 @@ if (!isset($_SESSION['login'])){
                 <div class="menu-creer-questions">
                     <span class="cadre-couleur-4">
                     </span>
-                    <a href="#" class="cadre-lien-image" id="link_creer_Questions">
+                    <a href="#4" class="cadre-lien-image" id="link_creer_Questions">
                         <p>Creer Questions</p>
                         <img src="../public/images/logos et icones/ic-ajout.png" alt="">
                     </a>
@@ -92,7 +92,7 @@ if (!isset($_SESSION['login'])){
         <div class="container">
 
             <div class="row">
-                <div class="texte">
+                <div class="texte" id="texte">
 
                 </div>
 
@@ -112,7 +112,7 @@ if (!isset($_SESSION['login'])){
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="../public/js/link_menu_admin.js"></script>

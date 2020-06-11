@@ -1,7 +1,6 @@
 <?php
 require_once ("fonctions.php");
 $objetPdo = getConnexion($database = "inscription_joueur_quizz");
-var_dump($objetPdo);
 
     $limit = $_POST["limit"];
     $offset = $_POST["offset"];

@@ -18,19 +18,17 @@
 <script>
 
     $(document).ready(function(){
-
+        
         let offset = 0;
         const tbody = $('#tbody');
         
         $.ajax({
-            
-        alert('ok');
-            
                 type: "POST",
                 url: "http://localhost/DIALLO-Bocar_QUIZZ_SA_BD_G1/data/sql_liste_joueurs.php",
                 data: {limit:7,offset:offset},
                 dataType: "JSON",
                 success: function (data) {
+                    console.log(data);
                     tbody.html('');
                     printData(data,tbody);
                     offset +=7;

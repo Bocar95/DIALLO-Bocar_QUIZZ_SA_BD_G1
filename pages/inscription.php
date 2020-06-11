@@ -14,36 +14,36 @@
         <div class="container">
             <div class="row">
                 <article class="col-md-6">
-                    <form action="./traitements/inscriptions-joueur.php" method="POST" class="form" id="inscription-form">
+                    <form action="" method="POST" class="form" id="inscription-form">
 
                         <div class="form-control">
                             <label for="prenom">Prenom</label>
-                            <input type="text" name="prenom" id="prenom" error="error-1" placeholder="Saisir votre prenom">
-                            <div class="error-form" id="error-1"></div>
+                            <input type="text" name="prenom" id="prenom" error="error3" placeholder="Saisir votre prenom">
+                            <div class="error-form" id="error3"></div>
                         </div>
 
                         <div class="form-control">
                             <label for="nom">Nom</label>
-                            <input type="text" name="nom" id="nom" error="error-2" placeholder="Saisir votre nom">
-                            <div class="error-form" id="error-2"></div>
-                        </div>
-
-                        <div class="form-control">
-                            <label for="login">Login</label>
-                            <input type="text" name="login" id="login" error="error-3" placeholder="Saisir votre Login">
-                            <div class="error-form" id="error-3"></div>
-                        </div>
-
-                        <div class="form-control">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" error="error-4" placeholder="Saisir votre mot de passe">
+                            <input type="text" name="nom" id="nom" error="error-4" placeholder="Saisir votre nom">
                             <div class="error-form" id="error-4"></div>
                         </div>
 
                         <div class="form-control">
-                            <label for="confirm">Confirmer</label>
-                            <input type="password" name="confirm" id="confirm" error="error-5" placeholder="Veuillez confirmer votre mot de passe">
+                            <label for="login">Login</label>
+                            <input type="text" name="login" id="login" error="error-5" placeholder="Saisir votre Login">
                             <div class="error-form" id="error-5"></div>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" error="error-6" placeholder="Saisir votre mot de passe">
+                            <div class="error-form" id="error-6"></div>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="confirm">Confirmer</label>
+                            <input type="password" name="confirm" id="confirm" error="error-7" placeholder="Veuillez confirmer votre mot de passe">
+                            <div class="error-form" id="error-7"></div>
                         </div>
                 </article>
 
@@ -67,4 +67,4 @@
 
         <script src="./public/js/jquery.js"></script>
     <script src="./public/js/retour_connexion.js"></script>
-    <script src="./public/js/validation2.js"></script>
+   <script src="./public/js/validation2.js"></script>

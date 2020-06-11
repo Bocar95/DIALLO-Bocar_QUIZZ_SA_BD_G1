@@ -1,45 +1,40 @@
-function fileContentLoader(target, fileName){
-    target.load(`../pages/${fileName}`,function(response, status,detail){        
-         if(status === 'error'){
-            $("#container-fluid").html(`<p class="text-center alert alert-danger col">Le contenu demandé est introuvable!</p>`);
-        }
-    });
-}
+//Link
+$('#link_liste_Questions').on("click",function(){
+
+    const menu_liste_Questions = $('#row');
+
+    menu_liste_Questions.html('');
+    menu_liste_Questions.load(`liste-questions.php`);
+    
+});
 
 //Link
-/*$('#link_inscription').click(function(e){
-    
-    const form_inscription = $('#container-fluid');
+$('#link_creer_admin').on("click",function(){
 
-    fileContentLoader(form_inscription,'inscription.php');
-    
-});*/
+    const menu_creer_admin = $('#row');
 
-//Link
-/*$('#link_inscription').click(function(e){
+    menu_creer_admin.html('');
+    menu_creer_admin.load(`creer-admin.php`);
     
-    const form_inscription = $('#container-fluid');
-
-    fileContentLoader(form_inscription,'inscription.php');
-    
-});*/
+});
 
 //Link
 $('#link_liste_joueurs').on("click",function(){
-    
+
     const menu_liste_joueurs = $('#row');
 
-    //fileContentLoader(menu_liste_joueurs,'liste-joueurs.php');
-    menu_liste_joueurs.html("");
+    menu_liste_joueurs.html('');
     menu_liste_joueurs.load(`liste-joueurs.php`);
     
 });
 
 //Link
-/*$('#link_inscription').click(function(e){
+$('#link_creer_Questions').on("click",function(){
     
-    const form_inscription = $('#container-fluid');
+    const menu_creer_questions = $('#row');
 
-    fileContentLoader(form_inscription,'inscription.php');
+    menu_creer_questions.html('');
+    menu_creer_questions.load(`creer-questions.php`);
     
-});*/
+    
+});
