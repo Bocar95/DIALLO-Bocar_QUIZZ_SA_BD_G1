@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <article class="col-md-6">
-                    <form action="" method="POST" class="form" id="inscription-form">
+                    <form action="traitements/inscriptions-joueur.php" method="POST" class="form" id="inscription-form">
 
                         <div class="form-control">
                             <label for="prenom">Prenom</label>
@@ -67,4 +67,4 @@
 
         <script src="./public/js/jquery.js"></script>
     <script src="./public/js/retour_connexion.js"></script>
-   <script src="./public/js/validation2.js"></script>
+   <!--<script src="./public/js/validation2.js"></script>-->

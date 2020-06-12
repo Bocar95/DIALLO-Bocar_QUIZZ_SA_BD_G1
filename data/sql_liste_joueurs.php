@@ -6,7 +6,7 @@ $objetPdo = getConnexion($database = "inscription_joueur_quizz");
     $offset = $_POST["offset"];
 
     $sql ="
-            SELECT (`prenom`), (`nom`) FROM inscriptions_joueur
+            SELECT (`prenom`), (`nom`), (`id_joueur`) FROM inscriptions_joueur
             ORDER BY id_joueur DESC
             LIMIT {$limit}
             OFFSET {$offset}

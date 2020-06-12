@@ -1,0 +1,5 @@
+#scrollzone {
+    max-height: 350px;
+    overflow: scroll;
+    min-height: 200PX;
+}

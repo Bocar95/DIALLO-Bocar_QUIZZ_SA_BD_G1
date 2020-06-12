@@ -35,4 +35,4 @@
 
         <script src="./public/js/jquery.js"></script>
         <script src="./public/js/inscription.js"></script>
-        <script src="public/js/validation.js"></script>
+        <script src="./public/js/validation.js"></script>
