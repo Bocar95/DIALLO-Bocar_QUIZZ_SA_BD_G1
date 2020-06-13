@@ -11,13 +11,13 @@
                     <div class="form-control">
                         <label for="login">Login</label>
                         <input type="text" name="login" id="login" error="error-1" placeholder="Saisir votre identifiant">
-                        <div class="error-form" id="error-1"></div>
+                        <small class="error-form" id="error_login"></small>
                     </div>
 
                     <div class="form-control">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" error="error-2" placeholder="Saisir votre mot de passe">
-                        <div class="error-form" id="error-2"></div>
+                        <small class="error-form" id="error_pwd"></small>
                     </div>
 
                     <div class="btn-connexion">
@@ -35,4 +35,4 @@
 
         <script src="./public/js/jquery.js"></script>
         <script src="./public/js/inscription.js"></script>
-        <script src="./public/js/validation.js"></script>
+        <script src="./public/js/validation_connexion.js"></script>

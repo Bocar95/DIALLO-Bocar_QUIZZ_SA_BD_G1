@@ -91,16 +91,6 @@ if (!isset($_SESSION['login'])){
 
         <div class="container">
 
-            <div class="row">
-                <div class="texte" id="texte">
-
-                </div>
-
-                <div class="ligne">
-                    <hr>
-                </div>
-            </div>
-
             <div class="row" id="row">
                 <!--ON AFFICHERA LES DIFFERENTES PAGES ICI-->
             </div>

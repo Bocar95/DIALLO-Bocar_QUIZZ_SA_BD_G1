@@ -1,29 +1,38 @@
-const inputs= document.getElementsByTagName("input");
-    for (input of inputs){
-        input.addEventListener("keyup",function(e){
-           if (e.target.hasAttribute("error")){
-               var idDivError=e.target.getAttribute("error");
-               document.getElementById(idDivError).innerText=""
-           }
-        })
-    }
-    document.getElementById("connexion-form").addEventListener("submit",function(e){
-        const inputs= document.getElementsByTagName("input");
-        var error=false;
-        for (input of inputs){
-            if (input.hasAttribute("error")){
-                var idDivError=input.getAttribute("error");
-            if (!input.value){
-                document.getElementById(idDivError).innerText="Ce champ est obligatoire."
-                error=true
-            }
-            
-            }
-        }
+    
+    $('#connexion').submit((event)=>{
+// Hiding error message
 
-        if(error){
-            e.preventDefault();
+        $("#error_login").hide();
+        var error_login = false;
+
+// Functions
+
+    function check_login() {
+        var login_length = $("#login").val().length;
+        if(login_length < 1) {
+            $("#error_login").html("This field is required!");
+            $("#error_login").show();
+            error_login = true;
+        }else {
+            $("#error_login").hide();
+        }
+    }
+    
+// Events
+
+    $("#login").focusout(function() {
+        check_login();
+    });
+
+    $("#connexion-form").submit(function() {
+        error_login = false;
+
+        check_login();
+
+        if(error_login == false) {
+            return true;
+        }else {
             return false;
         }
-           
-    })
+    });
+});
