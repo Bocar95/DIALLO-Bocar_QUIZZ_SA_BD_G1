@@ -5,18 +5,18 @@
     </div>
     <article class="col-6">
 
-        <form action="" method="POST" class="form" id="form">
+        <form action="../traitements/creer_questions.php" method="POST" class="form" id="question-form">
 
             <div class="form-control">
                 <label for="question">Questions</label>
-                <input type="text" name="question" id="question" error="error-1" placeholder="Saisir la question">
-                <div class="error-form" id="error-1"></div>
+                <input type="text" name="question" id="question" placeholder="Saisir la question">
+                <small class="error-form" id="error_question"></small>
             </div>
 
             <div class="form-control">
                 <label for="points">Nombre de points</label>
-                <input type="number" name="points" id="points" error="error-2">
-                <div class="error-form" id="error-2"></div>
+                <input type="number" name="points" id="points">
+                <small class="error-form" id="error_points"></small>
             </div>
 
             <div class="form-control">
@@ -46,35 +46,3 @@
 
 
 <style>@import url("../public/css/creer_questions.css");</style>
-
-<style>
-
-.champ {
-    width: 70%;
-    position: relative;
-    margin-left: 10%;
-    font-size: 20px;
-    border-radius: 6px;
-    background-color: whitesmoke;
-    border: 2px solid navajowhite;
-    text-align: center;
-}
-
-</style>
-
-<script>
-
-    var num = 0;
-
-$('#reponse').on("click",function(){
-    var typeReponse = $('#type_reponse').val();
-
-    if (typeReponse === "multiple"){
-        $('#zone_affichage').html(`<input type="text" name="reponse_${num}" id="reponse_${num}" class="champ" placeholder="Saisir la reponse">
-                                <input type="checkbox" name="checkbox_${num}" id="checkbox_${num}" class="btn btn-checkbox">
-                                    `)
-    num++;
-    }
-});
-
-</script>

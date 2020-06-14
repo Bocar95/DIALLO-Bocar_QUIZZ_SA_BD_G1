@@ -1,0 +1,92 @@
+
+.container {
+    background-color: #FFFFFF;
+    margin: 0px auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.form {
+    display: block;
+    position: relative;
+    background-color: #FFFFFF;
+    margin: 1% auto 0px auto;
+}
+
+.form-control {
+    height: 100%;
+    width: 75%;
+    position: relative;
+    border: none;
+    padding: 0px;
+}
+
+.form-control label{
+    display: block;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control input{
+    width: 100%;
+    height: 30px;
+    padding: 15px;
+    background: rgba(196, 196, 196, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.error-form {
+    color: red;
+    margin-bottom: 0px;
+}
+
+.upload label {
+    display: block;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-ronde2-avatar {
+    width : 150px;
+    height : 150px;
+    position: relative;
+    display: block;
+    
+    margin: 0px auto 2% auto;
+    border: none; 
+    -moz-border-radius : 75px; 
+    -webkit-border-radius : 75px; 
+    border-radius : 75px;
+    border: 2px solid darkturquoise;
+}
+
+.upload input {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    padding: 15px;
+    margin: 0px auto;
+}
+
+.btn-validation {
+    position: relative;
+    width: 35%;
+    margin: 10% auto 5% auto;
+}
+
+.btn-success {
+    width: 100%;
+}
