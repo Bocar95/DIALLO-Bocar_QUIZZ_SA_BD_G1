@@ -1,4 +1,5 @@
-
+@media screen and (min-width: 1330px)
+{
 .row h1 {
     width: 100%;
     color: black;
@@ -87,4 +88,232 @@
     display: block;
     width: 35%;
     margin: 0px auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1023px) and (max-width: 1329px)
+{
+.row h1 {
+    width: 100%;
+    color: black;
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px;
+    font-size: 70px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+
+}
+
+.row img {
+    position: relative;
+    width: 515px;
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 70%;
+    position: relative;
+    background-color: #FFFFFF;
+    margin: 21% auto 0px auto;
+    padding: 30px 40px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    height: 100%;
+    position: relative;
+    border: none;
+    margin-top: 7%;
+    padding: 0px;
+}
+
+.form-control label{
+    display: block;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control input{
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    background: rgba(196, 196, 196, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-form {
+    color: red;
+}
+
+.btn-connexion {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-inscription {
+    margin-top: 10%;
+}
+
+.btn-inscription p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-inscription a{
+    position: relative;
+    display: block;
+    width: 35%;
+    margin: 0px auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 1022px)
+{
+.row h1 {
+    width: 80%;
+    color: black;
+    position: relative;
+    top: 100px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15% auto;
+    padding: 0px;
+    font-size: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+
+}
+
+.row img {
+    position: relative;
+    width: 215px;
+    margin: 0px auto;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    width: 70%;
+    position: relative;
+    background-color: #FFFFFF;
+    margin: 0px auto 0px auto;
+    padding: 30px 40px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    height: 100%;
+    position: relative;
+    border: none;
+    margin-top: 7%;
+    padding: 0px;
+}
+
+.form-control label{
+    display: block;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control input{
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    background: rgba(196, 196, 196, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-form {
+    color: red;
+}
+
+.btn-connexion {
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-inscription {
+    margin-top: 10%;
+}
+
+.btn-inscription p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-inscription a{
+    position: relative;
+    display: block;
+    width: 35%;
+    margin: 0px auto;
+}
 }

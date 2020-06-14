@@ -49,15 +49,36 @@ return $req;
 }
 
 
-function sendDataJoueur($prenom,$nom,$login,$password){
+/*function sendDataJoueur($prenom,$nom,$login,$password){
     //session_start();
-        $objetPdo = getConnexion($database = "inscription_joueur_quizz");
+        $objetPdoJoueur = getConnexion($database = "inscription_joueur_quizz");
         
-        $pdoStat = $objetPdo->prepare("INSERT INTO inscriptions_joueur (id_joueur, prenom, nom, login, password, profil) VALUES (?,?,?,?,?,?)");
+        $pdoStat = $objetPdoJoueur->prepare("INSERT INTO inscriptions_joueur (id_joueur, prenom, nom, login, password, profil) VALUES (?,?,?,?,?,?)");
         $pdoStat -> execute(array(null, $prenom, $nom, $login, $password, 'joueur'));
+}*/
+
+function sendDataJoueur($prenom,$nom,$login,$password, $file){
+    //session_start();
+    $objetPdoJoueur = getConnexion($database = "inscription_joueur_quizz");
+
+    $response= $objetPdoJoueur->prepare('INSERT INTO inscriptions_joueur (id_joueur, prenom, nom, login, password, photo, profil,) VALUES (NULL, :prenom, :nom, :login, :password, :photo, :profil)');
+    $response->execute(array(
+        'prenom'=>$prenom,
+        'nom'=>$nom,
+        'login'=>$login,
+        'password'=>$password,
+        'photo'=>$file,
+        'profil'=>"joueur"
+    ));
+    if($response->rowCount() > 0){
+        header("location: ../index.php");
+    }else {
+        echo "nok";
+    }
+    $response->closeCursor();
 }
 
-function sendDataAdmin($prenom,$nom,$login,$password){
+/*function sendDataAdmin($prenom,$nom,$login,$password){
 
 try{
     $objetPdo = getConnexion($database = "creer_admin");
@@ -75,6 +96,27 @@ try{
     exit($e -> getMessage());
     }
 
+}*/
+
+function sendDataAdmin($prenom,$nom,$login,$password,$file){
+    //session_start();
+    $objetPdoAdmin = getConnexion($database = "creer_admin");
+
+    $response= $objetPdoAdmin->prepare('INSERT INTO admin (id_joueur, prenom, nom, login, password, photo, profil,) VALUES (NULL, :prenom, :nom, :login, :password, :photo, :profil)');
+    $response->execute(array(
+        'prenom'=>$prenom,
+        'nom'=>$nom,
+        'login'=>$login,
+        'password'=>$password,
+        'photo'=>$file,
+        'profil'=>"admin"
+    ));
+    if($response->rowCount() > 0){
+        header("location: ../index.php");
+    }else {
+        echo "nok";
+    }
+    $response->closeCursor();
 }
 
 

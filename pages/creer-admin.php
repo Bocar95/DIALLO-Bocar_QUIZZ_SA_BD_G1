@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <article class="col-md-6">
-            <form action="../traitements/creer_admin.php" method="POST" class="form" id="inscription-form">
+            <form action="../traitements/creer_admin.php" method="POST" class="form" id="inscription-form" enctype="multipart/form-data">
 
                 <div class="form-control">
                     <label for="prenom">Prenom</label>
@@ -41,8 +41,9 @@
 
                     <div class="upload">
                         <label for="photo">Photo</label>
-                        <img src="./public/images/logos et icones/7.jpg" id="im" class="image-ronde2-avatar">
-                        <input type="file" name="monfichier" id="photo" class="btn btn-primary" onchange="previewImage(event)"/>
+                        <img id="output" class="image-ronde-avatar">
+                        <small class="pl-4" id="aint"></small>
+                        <input type="file" name="monfichier" id="photo" class="btn btn-primary" accept="photos/*" onchange="loadFile(event)"/>
 
                         <div class="btn-validation">
                             <button type="submit" name="valider" id="valider" class="btn btn-success">Valider</button>
@@ -56,4 +57,7 @@
 </div>
 
 <script src="../public/js/jquery.js"></script>
+<script src="../public/js/image_output.js"></script>
 <script src="../public/js/validation-inscription.js"></script>
+<script src="../public/js/style_inputs_admin.js"></script>
+

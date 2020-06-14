@@ -1,3 +1,5 @@
+@media screen and (min-width: 1330px)
+{
 *{
     box-sizing: border-box;
 }
@@ -212,4 +214,501 @@ body {
     position: relative;
     width: 100%;
     text-decoration: none;
+}
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1023px) and (max-width: 1329px)
+{
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 255, 0, 0.7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.menu-liste-questions {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #FFFFFF;
+}
+
+.menu-creer-admin {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #FFFFFF;
+}
+
+.menu-liste-joueurs {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #FFFFFF;
+}
+
+.menu-creer-questions {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #FFFFFF;
+}
+
+.cadre-couleur-1{
+    position: relative;
+    float: left;
+    width: 5%;
+    height: 100%;
+    background-color: #0395c2;
+}
+
+.cadre-couleur-2{
+    position: relative;
+    float: left;
+    width: 5%;
+    height: 100%;
+    background-color: orange;
+}
+
+.cadre-couleur-3{
+    position: relative;
+    float: left;
+    width: 5%;
+    height: 100%;
+    background-color: blue;
+}
+
+.cadre-couleur-4{
+    position: relative;
+    float: left;
+    width: 5%;
+    height: 100%;
+    background-color: purple;
+}
+
+.cadre-lien-image p{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cadre-lien-image img {
+    position: relative;
+    display: flex;
+    margin: 0px 50%;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    bottom: 5%;
+    display: block;
+    align-items: center;
+}
+
+.image img {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    width: 100px;
+    height: 100px;
+}
+
+.image-identifiant {
+    position: relative;
+    display: inline;
+    margin: 0px auto 0px auto;
+}
+
+.image-ronde-avatar {
+    width : 70px;
+    height : 70px;
+    position: relative;
+    display: block;
+    margin: 0px auto 5% auto;
+    border: none; 
+    -moz-border-radius : 75px; 
+    -webkit-border-radius : 75px; 
+    border-radius : 75px;
+    border: 2px solid #000000;
+}
+
+.prenom-nom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.barre {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.barre p {
+    display: inline;
+    margin: 0px auto;
+    font-size: 40px;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.barre a {
+    position: relative;
+    display: inline;
+    left: 10%;
+    bottom: 7%;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    height: 65%;
+    background-color: #FFFFFF;
+    margin: 0px auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    overflow: scroll;
+}
+
+
+/* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */
+
+.menu-liste-questions:hover {
+    border-left: 7px solid #045c1e;
+    background-color: darkturquoise;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-creer-admin:hover {
+    border-left: 7px solid #045c1e;
+    background-color: rgba(242, 153, 74, 0.75);;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-liste-joueurs:hover {
+    border-left: 7px solid #045c1e;
+    background-color: #2D9CDB;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-creer-questions:hover {
+    border-left: 7px solid #045c1e;
+    background-color: #BB6BD9;;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 320px) and (max-width: 1022px)
+{
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 255, 0, 0.7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.menu-liste-questions {
+    position: relative;
+    width: 100%;
+    height: 55px;    
+    background-color: #FFFFFF;
+}
+
+.menu-creer-admin {
+    position: relative; 
+    width: 100%;
+    height: 55px;
+    margin-top: 1%;
+    background-color: #FFFFFF;
+}
+
+.menu-liste-joueurs {
+    position: relative;
+    width: 100%;
+    height: 55px;    
+    background-color: #FFFFFF;
+}
+
+.menu-creer-questions {
+    position: relative;
+    width: 100%;
+    margin-top: 1%;    
+    height: 55px;
+    background-color: #FFFFFF;
+}
+
+.cadre-couleur-1{
+    position: relative;
+    float: left;
+    width: 1%;
+    height: 100%;
+    background-color: #0395c2;
+}
+
+.cadre-couleur-2{
+    position: relative;
+    float: left;
+    width: 1%;
+    height: 100%;
+    background-color: orange;
+}
+
+.cadre-couleur-3{
+    position: relative;
+    float: left;
+    width: 1%;
+    height: 100%;
+    background-color: blue;
+}
+
+.cadre-couleur-4{
+    position: relative;
+    float: left;
+    width: 1%;
+    height: 100%;
+    background-color: purple;
+}
+
+.cadre-lien-image p{
+    position: relative;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+.cadre-lien-image img {
+    position: relative;
+    margin-top: 0px;    
+    display: flex;
+    margin: 0px 0px 0px 48%;
+    
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    bottom: 0%;
+    display: block;
+    align-items: center;
+}
+
+.image img {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+    width: 100px;
+    height: 100px;
+}
+
+.image-identifiant {
+    position: relative;
+    display: inline;
+    margin: 2% 0px 0px 41%;
+}
+
+.image-ronde-avatar {
+    width : 70px;
+    height : 70px;
+    position: relative;
+    display: block;
+    margin: 0px auto 5% auto;
+    border: none; 
+    -moz-border-radius : 75px; 
+    -webkit-border-radius : 75px; 
+    border-radius : 75px;
+    border: 2px solid #000000;
+}
+
+.prenom-nom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.barre {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 37px;
+    background-color: #000000;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+.barre p {
+    display: inline;
+    margin: 0px auto;
+    font-size: 20px;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.barre a {
+    position: relative;
+    display: inline;
+    left: 0%;
+    bottom: 0%;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.container {
+    position: relative;
+    height: 65%;
+    background-color: #FFFFFF;
+    margin: 0px auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    overflow: scroll;
+}
+
+
+/* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */ /* HOVER */
+
+.menu-liste-questions:hover {
+    border-left: 7px solid #045c1e;
+    background-color: darkturquoise;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-creer-admin:hover {
+    border-left: 7px solid #045c1e;
+    background-color: rgba(242, 153, 74, 0.75);;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-liste-joueurs:hover {
+    border-left: 7px solid #045c1e;
+    background-color: #2D9CDB;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.menu-creer-questions:hover {
+    border-left: 7px solid #045c1e;
+    background-color: #BB6BD9;;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
 }
