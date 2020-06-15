@@ -1,6 +1,6 @@
 <?php
 require_once "fonctions.php";
-$objetPdo = getConnexion($database = "inscription_joueur_quizz");
+$objetPdo = getConnexion($database = "bocar_inscription_joueur_quizz");
 
 if (isset($_POST['firstname']) and isset($_POST['lastname'])){
     $num= $_POST['idu'];

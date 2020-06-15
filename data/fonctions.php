@@ -9,9 +9,9 @@ session_start();
 
 function getConnexion($database = "")
  {
-    $host= "localhost";
-    $username ="root";
-    $password = "";
+    $host= "mysql-bocar.alwaysdata.net";
+    $username ="bocar";
+    $password = "KUdjbG@smQ8wSUR";
     $objetPDO="";
 
     try {
@@ -30,7 +30,7 @@ function getConnexion($database = "")
 function getUserConnexion($login, $password){
 //session_start();
 
-    $opdo=getConnexion($database = "initialisation_user_quizz");
+    $opdo=getConnexion($database = "bocar_initialisation_user_quizz");
 
     // table user
     $sql='SELECT * FROM user WHERE login =:login AND password =:password';
@@ -59,9 +59,9 @@ return $req;
 
 function sendDataJoueur($prenom,$nom,$login,$password, $file){
     //session_start();
-    $objetPdoJoueur = getConnexion($database = "inscription_joueur_quizz");
+    $objetPdoJoueur = getConnexion($database = "bocar_inscription_joueur_quizz");
 
-    $response= $objetPdoJoueur->prepare('INSERT INTO inscriptions_joueur (id_joueur, prenom, nom, login, password, photo, profil,) VALUES (NULL, :prenom, :nom, :login, :password, :photo, :profil)');
+    $response= $objetPdoJoueur->prepare('INSERT INTO `inscriptions_joueur` (`id_joueur`, `prenom`, `nom`, `login`, `password`, `photo`, `profil`) VALUES (NULL, :prenom, :nom, :login, :password, :photo, :profil)');
     $response->execute(array(
         'prenom'=>$prenom,
         'nom'=>$nom,
@@ -100,9 +100,9 @@ try{
 
 function sendDataAdmin($prenom,$nom,$login,$password,$file){
     //session_start();
-    $objetPdoAdmin = getConnexion($database = "creer_admin");
+    $objetPdoAdmin = getConnexion($database = "bocar_creer_admin_quizz");
 
-    $response= $objetPdoAdmin->prepare('INSERT INTO admin (id_joueur, prenom, nom, login, password, photo, profil,) VALUES (NULL, :prenom, :nom, :login, :password, :photo, :profil)');
+    $response= $objetPdoAdmin->prepare('INSERT INTO `admin` (`id_admin`, `prenom`, `nom`, `login`, `password`, `photo`, `profil`) VALUES (NULL, :prenom, :nom, :login, :password, :photo, :profil)');
     $response->execute(array(
         'prenom'=>$prenom,
         'nom'=>$nom,

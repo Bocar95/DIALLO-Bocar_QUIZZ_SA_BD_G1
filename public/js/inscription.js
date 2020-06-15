@@ -21,9 +21,9 @@ $('#connexion-form').submit(function(){
         data: form_data,
         success: function(data,statut){
             if (data==="success_admin"){
-                window.location.replace('pages/admin');
+                window.location.replace('./pages/admin.php');
             }else if(data==="success_joueur") {
-                window.location.replace('pages/jeu');
+                window.location.replace('./pages/jeu.php');
             }else{
                 return false;
             }
